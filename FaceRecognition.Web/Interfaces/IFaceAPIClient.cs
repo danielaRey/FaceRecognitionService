@@ -9,9 +9,9 @@ namespace FaceRecognition.Web.Interfaces
 {
     public interface IFaceAPIClient
     {
-        Task CreatePersonAsync(string name, string description, byte[] imgdata);
-        Task AddFaceAsync(Guid personId, byte[] imgdata);
+        //Task CreatePersonAsync(string name, string description, byte[] imgdata);
+        //Task AddFaceAsync(Guid personId, byte[] imgdata);
         Task<List<PersonViewModel>> RecognizeAsync(byte[] imgdata);
-        Task<List<PersonViewModel>> GetAllAsync();
+        //Task<List<PersonViewModel>> GetAllAsync();
     }
 }

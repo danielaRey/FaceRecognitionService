@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[2.1.2, )"
             },
+            "Microsoft.Azure.CognitiveServices.Vision.Face": {
+              "target": "Package",
+              "version": "[2.7.0-preview.1, )"
+            },
             "Microsoft.NETCore.App": {
               "target": "Package",
               "version": "[2.1.0, )",
