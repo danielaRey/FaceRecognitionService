@@ -25,15 +25,15 @@ namespace FaceRecognition.Web.Controllers
             return View();
         }
 
-        public async Task<IActionResult> List()
-        {
-            var personListViewModel = new PersonListViewModel 
-            {
-                List = await faceClient.GetAllAsync()
-            };
+        // public async Task<IActionResult> List()
+        // {
+        //     var personListViewModel = new PersonListViewModel 
+        //     {
+        //         List = await faceClient.GetAllAsync()
+        //     };
 
-            return View(personListViewModel);
-        }
+        //     return View(personListViewModel);
+        // }
 
         public IActionResult Recognize()
         {
@@ -50,44 +50,44 @@ namespace FaceRecognition.Web.Controllers
             try
             {
                 var imgdata = new WebClient().DownloadData(imageUrl);
-                return Json(await faceClient.RecognizeAsync(imgdata));
+                return Json(await faceClient.RecognizeAsync(imageUrl));
             }
-            catch(WebException)
+            catch (WebException)
             {
                 return BadRequest("Error accessing image, please try another");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Logger.Error(ex, "Error recognizing");                
+                Logger.Error(ex, "Error recognizing");
             }
 
-            return UnprocessableEntity("Please try again later");            
+            return UnprocessableEntity("Please try again later");
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(PersonViewModel personViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    var imgdata = new WebClient().DownloadData(personViewModel.ImageUrl);
-                    await faceClient.CreatePersonAsync(personViewModel.Name, personViewModel.Description, imgdata);
-                    TempData["Message"] = "Success";                    
-                    return RedirectToAction("Create");
-                }
-                catch(WebException)
-                {
-                    ModelState.AddModelError("", "Error accessing image, please try another");
-                }
-                catch(Exception ex)
-                {
-                    Logger.Error(ex, "Error creating person");
-                    ModelState.AddModelError("", "Please try again later");
-                }                
-            }
+        // [HttpPost]
+        // public async Task<IActionResult> Create(PersonViewModel personViewModel)
+        // {
+        //     if (ModelState.IsValid)
+        //     {
+        //         try
+        //         {
+        //             var imgdata = new WebClient().DownloadData(personViewModel.ImageUrl);
+        //             await faceClient.CreatePersonAsync(personViewModel.Name, personViewModel.Description, imgdata);
+        //             TempData["Message"] = "Success";
+        //             return RedirectToAction("Create");
+        //         }
+        //         catch (WebException)
+        //         {
+        //             ModelState.AddModelError("", "Error accessing image, please try another");
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             Logger.Error(ex, "Error creating person");
+        //             ModelState.AddModelError("", "Please try again later");
+        //         }
+        //     }
 
-            return View();
-        }
+        //     return View();
+        // }
     }
 }

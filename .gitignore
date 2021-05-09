@@ -9,3 +9,10 @@ FaceRecognition.Web/.vs/FaceRecognition.Web/v16/Server/sqlite3/storage.ide-shm
 *.dll
 *.pdb
 FaceRecognition.Web/obj/Debug/netcoreapp2.1/FaceRecognition.Web.Views.dll
+FaceRecognition.Web/.vs/FaceRecognition.Web/v16/.suo
+FaceRecognition.Web/.vs/FaceRecognition.Web/DesignTimeBuild/.dtbcache
+FaceRecognition.Web/bin/Debug/netcoreapp2.1/FaceRecognition.Web.deps.json
+FaceRecognition.Web/bin/Debug/netcoreapp2.1/FaceRecognition.Web.dll
+FaceRecognition.Web/bin/Debug/netcoreapp2.1/FaceRecognition.Web.pdb
+FaceRecognition.Web/bin/Debug/netcoreapp2.1/FaceRecognition.Web.Views.dll
+FaceRecognition.Web/obj/Debug/netcoreapp2.1/FaceRecognition.Web.Views.dll

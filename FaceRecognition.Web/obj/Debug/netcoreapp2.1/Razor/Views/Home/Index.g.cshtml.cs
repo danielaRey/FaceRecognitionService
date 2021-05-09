@@ -76,7 +76,7 @@ using FaceRecognition.Web.Models;
         <p>");
             EndContext();
             BeginContext(522, 105, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f2240a58bb1b4550b669f6cb39cb2430", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "98b50790782045f5881b5f91c0be779f", async() => {
                 BeginContext(612, 11, true);
                 WriteLiteral("Start now »");
                 EndContext();
@@ -103,7 +103,7 @@ using FaceRecognition.Web.Models;
             WriteLiteral("</p>\r\n    </div>\r\n    <div class=\"col-sm-4\">\r\n        <h2>Recognize</h2>\r\n        <p>Upload an image and see all the matches with their probability.</p>\r\n        <p>");
             EndContext();
             BeginContext(792, 108, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "983339bf2c704fce9758d33d584828c0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6564037826e24ad18bef934c7e7be7e9", async() => {
                 BeginContext(885, 11, true);
                 WriteLiteral("Start now »");
                 EndContext();
@@ -130,7 +130,7 @@ using FaceRecognition.Web.Models;
             WriteLiteral("</p>\r\n    </div>\r\n    <div class=\"col-sm-4\">\r\n        <h2>List</h2>\r\n        <p>See all the people stored with their current information.</p>\r\n        <p>");
             EndContext();
             BeginContext(1054, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e1c4cc83a004825950d511a1f5b09a5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "02705c3a4bb0486199f22b7de485e7d9", async() => {
                 BeginContext(1142, 11, true);
                 WriteLiteral("Start now »");
                 EndContext();

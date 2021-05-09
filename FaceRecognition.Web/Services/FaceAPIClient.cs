@@ -37,7 +37,7 @@ namespace FaceRecognition.Web.Services
         //     await faceServiceClient.TrainPersonGroupAsync(groupId);
         // }
 
-        public async Task<List<PersonViewModel>> RecognizeAsync(byte[] imgdata)
+        public async Task<List<PersonViewModel>> RecognizeAsync(string imageUrl)
         {
             var returnedAttributes = new List<FaceAttributeType>
             {
@@ -45,35 +45,19 @@ namespace FaceRecognition.Web.Services
             };
 
             var faces = await faceServiceClient.Face.DetectWithUrlAsync(
-              "https://source.unsplash.com/pQV8dGHrOLU",
+              imageUrl,
               returnFaceAttributes: returnedAttributes
             );
 
+            List<PersonViewModel> personAttributes = new List<PersonViewModel>();
+
             foreach (var face in faces)
             {
+                personAttributes.Add(new PersonViewModel() { Name = face.FaceAttributes.Gender.ToString(), Description = face.FaceAttributes.Age.ToString() });
                 Console.WriteLine($"Age: {face.FaceAttributes.Age}, Gender: {face.FaceAttributes.Gender}");
             }
 
-            var imageCandidates = (await faceServiceClient.DetectAsync(new MemoryStream(imgdata))).Select(c => new PersonViewModel(c.FaceId)).ToList();
-
-            if (imageCandidates.Any())
-            {
-                var response = await faceServiceClient.IdentifyAsync(groupId, imageCandidates.Select(c => c.Id).ToArray(), (float)0.65, 1);
-                var persons = await GetAllAsync();
-
-                for (var i = 0; i < response.Length; i++)
-                {
-                    var current = response[i].Candidates.FirstOrDefault();
-                    if (current != null)
-                    {
-                        var candidate = persons.Find(p => p.Id == current.PersonId);
-                        imageCandidates[i].Name = candidate.Name;
-                        imageCandidates[i].Description = candidate.Description;
-                        imageCandidates[i].Confidence = current.Confidence;
-                    }
-                }
-            }
-            return imageCandidates.Where(c => c.Confidence.HasValue).ToList();
+            return personAttributes.ToList();
         }
 
         // public async Task<List<PersonViewModel>> GetAllAsync()
