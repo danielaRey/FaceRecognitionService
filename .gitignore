@@ -1,0 +1,11 @@
+
+*.lock
+*.ide
+FaceRecognition.Web/.vs/FaceRecognition.Web/v16/Server/sqlite3/storage.ide-shm
+*.ide-wal
+*.cache
+*.dll
+*.pdb
+*.dll
+*.pdb
+FaceRecognition.Web/obj/Debug/netcoreapp2.1/FaceRecognition.Web.Views.dll
