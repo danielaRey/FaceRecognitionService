@@ -40,9 +40,19 @@ var face = {
         var row = tbody.insertRow(tbody.rows.length);
         var cellName = row.insertCell(0);
         var cellDescription = row.insertCell(1);
-        var cellConfidence = row.insertCell(2);
+        var cellEmotions = row.insertCell(2);
+        var cellConfidence = row.insertCell(3);
         cellName.innerHTML = result[i].name.trim();
         cellDescription.innerHTML = result[i].description.trim();
+        cellEmotions.innerHTML = `Anger: ${result[
+          i
+        ].anger.trim()}, Happiness: ${result[
+          i
+        ].happiness.trim()}, Sadness: ${result[
+          i
+        ].sadness.trim()}, Surprise: ${result[
+          i
+        ].surprise.trim()}, Neutral: ${result[i].neutral.trim()}`;
         cellConfidence.innerHTML =
           (result[i].confidence * 100).toFixed(2) + "%";
       }
