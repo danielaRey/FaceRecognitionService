@@ -28,7 +28,7 @@ namespace FaceRecognition.Web.Services
         {
             var returnedAttributes = new List<FaceAttributeType>
             {
-                FaceAttributeType.Age, FaceAttributeType.Gender, FaceAttributeType.Emotion
+                FaceAttributeType.Age, FaceAttributeType.Gender, FaceAttributeType.Emotion, FaceAttributeType.Glasses,FaceAttributeType.FacialHair
             };
 
             var faces = await faceServiceClient.Face.DetectWithUrlAsync(
@@ -49,6 +49,8 @@ namespace FaceRecognition.Web.Services
                     Sadness = face.FaceAttributes.Emotion.Sadness.ToString(),
                     Surprise = face.FaceAttributes.Emotion.Surprise.ToString(),
                     Neutral = face.FaceAttributes.Emotion.Neutral.ToString(),
+                    Glasses = face.FaceAttributes.Glasses.ToString(),
+                    Moustache = face.FaceAttributes.FacialHair.Moustache.ToString()
                 });
                 Console.WriteLine($"Age: {face.FaceAttributes.Age}, Gender: {face.FaceAttributes.Gender}");
             }

@@ -11,7 +11,7 @@ namespace FaceRecognition.Web.Models
             Id = id;
         }
 
-        public PersonViewModel(string name, string description, Guid id, string hap, string ang, string surp, string sad, string neu)
+        public PersonViewModel(string name, string description, Guid id, string hap, string ang, string surp, string sad, string neu, string m, string g)
         {
             Name = name;
             Description = description;
@@ -22,6 +22,8 @@ namespace FaceRecognition.Web.Models
             Anger = ang;
             Sadness = sad;
             Neutral = neu;
+            Glasses = g;
+            Moustache = m;
         }
 
         [StringLength(64)]
@@ -50,5 +52,11 @@ namespace FaceRecognition.Web.Models
         [StringLength(64)]
         [Required(ErrorMessage = "Neutral is required")]
         public string Neutral { get; set; }
+        [StringLength(64)]
+        [Required(ErrorMessage = "Makeup is required")]
+        public string Glasses { get; set; }
+        [StringLength(64)]
+        [Required(ErrorMessage = "Moustache is required")]
+        public string Moustache { get; set; }
     }
 }

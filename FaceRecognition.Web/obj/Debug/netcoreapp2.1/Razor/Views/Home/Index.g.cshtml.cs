@@ -75,7 +75,7 @@ using FaceRecognition.Web.Models;
         <p>");
             EndContext();
             BeginContext(543, 108, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e21d28f87f174e1b8281ba51f63e1c27", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13fd4ebe706a4884b97639ef534cc12b", async() => {
                 BeginContext(636, 11, true);
                 WriteLiteral("Start now »");
                 EndContext();

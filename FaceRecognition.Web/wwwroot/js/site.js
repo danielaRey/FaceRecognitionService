@@ -41,9 +41,11 @@ var face = {
         var cellName = row.insertCell(0);
         var cellDescription = row.insertCell(1);
         var cellEmotions = row.insertCell(2);
-        var cellConfidence = row.insertCell(3);
+        var cellGlasses = row.insertCell(3);
+        var cellMoustache = row.insertCell(4);
         cellName.innerHTML = result[i].name.trim();
         cellDescription.innerHTML = result[i].description.trim();
+        cellMoustache.innerHTML = result[i].moustache.trim();
         cellEmotions.innerHTML = `Anger: ${result[
           i
         ].anger.trim()}, Happiness: ${result[
@@ -53,8 +55,7 @@ var face = {
         ].sadness.trim()}, Surprise: ${result[
           i
         ].surprise.trim()}, Neutral: ${result[i].neutral.trim()}`;
-        cellConfidence.innerHTML =
-          (result[i].confidence * 100).toFixed(2) + "%";
+        cellGlasses.innerHTML = result[i].glasses.trim();
       }
     }
     $("#result").removeClass("d-none");
