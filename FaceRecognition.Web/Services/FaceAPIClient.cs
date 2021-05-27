@@ -41,7 +41,7 @@ namespace FaceRecognition.Web.Services
         {
             var returnedAttributes = new List<FaceAttributeType>
             {
-                FaceAttributeType.Age, FaceAttributeType.Gender
+                FaceAttributeType.Age, FaceAttributeType.Gender, FaceAttributeType.Emotion
             };
 
             var faces = await faceServiceClient.Face.DetectWithUrlAsync(
@@ -53,7 +53,15 @@ namespace FaceRecognition.Web.Services
 
             foreach (var face in faces)
             {
-                personAttributes.Add(new PersonViewModel() { Name = face.FaceAttributes.Gender.ToString(), Description = face.FaceAttributes.Age.ToString() });
+                personAttributes.Add(new PersonViewModel()
+                {
+                    Gender = face.FaceAttributes.Gender.ToString(),
+                    Age = face.FaceAttributes.Age.ToString(),
+                    //Anger = face.FaceAttributes.Emotion.Anger.ToString(),
+                    //Sadness = face.FaceAttributes.Emotion.Sadness.ToString(),
+                    //Happiness = face.FaceAttributes.Emotion.Happiness.ToString(),
+                    //Surprise = face.FaceAttributes.Emotion.Surprise.ToString(),
+                });
                 Console.WriteLine($"Age: {face.FaceAttributes.Age}, Gender: {face.FaceAttributes.Gender}");
             }
 

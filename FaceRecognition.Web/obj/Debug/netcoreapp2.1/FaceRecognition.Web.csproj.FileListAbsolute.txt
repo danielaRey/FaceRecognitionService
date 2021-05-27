@@ -31,6 +31,4 @@ D:\I ciclo 2021\redes\FaceRecognitionService\FaceRecognition.Web\obj\Debug\netco
 D:\I ciclo 2021\redes\FaceRecognitionService\FaceRecognition.Web\obj\Debug\netcoreapp2.1\FaceRecognition.Web.pdb
 D:\I ciclo 2021\redes\FaceRecognitionService\FaceRecognition.Web\obj\Debug\netcoreapp2.1\FaceRecognition.Web.csproj.CopyComplete
 D:\I ciclo 2021\redes\FaceRecognitionService\FaceRecognition.Web\bin\Debug\netcoreapp2.1\nlog.config
-D:\I ciclo 2021\redes\FaceRecognitionService\FaceRecognition.Web\obj\Debug\netcoreapp2.1\Razor\Views\People\Create.g.cshtml.cs
-D:\I ciclo 2021\redes\FaceRecognitionService\FaceRecognition.Web\obj\Debug\netcoreapp2.1\Razor\Views\People\List.g.cshtml.cs
 D:\I ciclo 2021\redes\FaceRecognitionService\FaceRecognition.Web\obj\Debug\netcoreapp2.1\Razor\Views\People\Recognize.g.cshtml.cs

@@ -5,8 +5,6 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using FaceRecognition.Web.Models;
-using FaceRecognition.Web.Services;
 using FaceRecognition.Web.Interfaces;
 
 namespace FaceRecognition.Web.Controllers
