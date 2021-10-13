@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\I ciclo 2021\\redes\\FaceRecognitionService\\FaceRecognition.Web\\FaceRecognition.Web.csproj": {}
+  },
+  "projects": {
+    "D:\\I ciclo 2021\\redes\\FaceRecognitionService\\FaceRecognition.Web\\FaceRecognition.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\I ciclo 2021\\redes\\FaceRecognitionService\\FaceRecognition.Web\\FaceRecognition.Web.csproj",
+        "projectName": "FaceRecognition.Web",
+        "projectPath": "D:\\I ciclo 2021\\redes\\FaceRecognitionService\\FaceRecognition.Web\\FaceRecognition.Web.csproj",
+        "packagesPath": "C:\\Users\\Dani\\.nuget\\packages\\",
+        "outputPath": "D:\\I ciclo 2021\\redes\\FaceRecognitionService\\FaceRecognition.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Dani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.Azure.CognitiveServices.Vision.Face": {
+              "target": "Package",
+              "version": "[2.7.0-preview.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.ProjectOxford.Face.DotNetCore": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.5.11, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
